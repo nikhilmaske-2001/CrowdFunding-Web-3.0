@@ -29,6 +29,7 @@ contract CrowdFunding {
         // The storage keyword specifies that the campaign variable refers to data stored on the blockchain (i.e., in contract storage), rather than in memory.
         Campaign storage campaign = campaigns[numberOfCampaigns];
 
+        // Check if the condition is okay?
         require(campaign.deadline < block.timestamp, "The deadline should be a date in the future.");
 
         campaign.owner = _owner;
